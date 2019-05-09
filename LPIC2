@@ -1,0 +1,5 @@
+How to get os version
+  rpm --query centos-release
+  or
+  uname -a  This gives you kernel version
+**************
