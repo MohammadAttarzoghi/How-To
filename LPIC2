@@ -3,3 +3,54 @@ How to get os version
   or
   uname -a  This gives you kernel version
 **************
+How to copy,cut and paste in vi
+  In this article, we’ll show you how to copy, cut and paste in vi.
+
+  This will be explained both selecting text as using movement commands. We’ll also tell you how to copy and cut multiple chunks of text.
+
+  1. Introduction
+  To remember easily the commands used for copying and cutting in vi, it’s useful to know the words they come from:
+
+  d comes from delete, which you usually know as cut.
+  y comes from yank, which you usually know as copy.
+  p comes from paste, so nothing new here.
+  Keeping this in mind, you may find it easier to memorize the commands.
+
+  2. Selecting, Copying (or Cutting) and Pasting Text
+  We’ll start with normal mode and position the cursor at the start of the text that we want to copy. Then we’ll do the following steps:
+
+  Press v to start selecting.
+  You can also use V (capital v) to select whole lines or Ctrl+v to select rectangular blocks.
+  Move the cursor to the end of the text you want to copy.
+  Press y to copy the text (or d to cut it).
+  Move the cursor where you want to paste the text.
+  Press p to paste the text after the cursor (or P (capital p) to paste it before the cursor).
+  3. Copying and Cutting with Movement Commands
+  As well as you can copy and cut by selecting the text that you want to, you can also use movement commands to specify what text will be selected. This way you can do:
+
+  yy or `Y — copy the whole line (including the new line character).
+  y$ — copy from the cursor to the end of the line (excluding the new line character).
+  y0 — copy from the cursor to the start of the line.
+  yiw— copy the current word (excluding surrounding whitespace).
+  yaw— copy the current word (including surrounding whitespace).
+  4. Multiple Copying or Cutting
+  To copy or cut several chunks of text at the same time, you’ll need to use vi’s registers. A register is a location in Vim’s memory identified with a single letter. A double quote plus character is used to specify that the next letter typed is the name of a register (so "a would be the a register).
+
+  After this short explanation, for doing this you should type "ay and yank that word to the a register. Then you’ll be able to paste that word anywhere in the text using "ap" (or“aP` if you want to paste it before the cursor).
+
+  4.1. A Little More About Vi’s Registers
+  By default, all copying and cutting operations are stored in the unnamed registry "" (also named quotequote).
+  A double quote plus an uppercase character is used to append content to a register(with "Ay you would append a yanked text to the a register).
+  There are more default registers, some of them are:
+  "+ for Linux clipboard.
+  "* for Windows clipboard.
+  "0 will store the text of the last yank.
+  "1 will store the text from the last delete.
+  All current registers can be listed the list of all of them with the :reg command.
+  5. Conclusion
+  At this point, we’ve learned how to copy and cut text in vi.
+
+  To sum it up, you need to v select, y copy, d cut and p paste.
+***************************
+
+
