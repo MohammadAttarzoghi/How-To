@@ -52,5 +52,17 @@ How to copy,cut and paste in vi
 
   To sum it up, you need to v select, y copy, d cut and p paste.
 ***************************
+How to Setup a ssh Socks connection
+  in client creat a ssh key and copy it to server.
+  use this command: ssh -D 8123 -f -C -q -N sammy@example.com
+  
+    -D: Tells SSH that we want a SOCKS tunnel on the specified port number (you can choose a number between 1025-65536)
+    -f: Forks the process to the background
+    -C: Compresses the data before sending it
+    -q: Uses quiet mode
+    -N: Tells SSH that no command will be sent once the tunnel is up
+    to verify the connection is set use this command ps aux | grep ssh
+    
+
 
 
