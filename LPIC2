@@ -62,6 +62,8 @@ How to Setup a ssh Socks connection
     -q: Uses quiet mode
     -N: Tells SSH that no command will be sent once the tunnel is up
     to verify the connection is set use this command ps aux | grep ssh
+    write down PID from previouse command output.
+    And  use kill command to eliminate this connection.
     
 
 
